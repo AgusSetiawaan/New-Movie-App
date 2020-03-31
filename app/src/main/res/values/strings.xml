@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Kitabisa Test Project</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="release_date">release date</string>
+    <string name="title">Movie APP</string>
+    <string name="category">Category</string>
+    <string name="author">Author</string>
+    <string name="reviews">Reviews</string>
+    <string name="see_all_reviews">See all reviews</string>
+    <string name="review_empty">This movie doesn\'t have any reviews at this time.</string>
+    <string name="popular">Popular</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="favourite">Favourite</string>
+    <string name="review_by">A review by %s</string>
+</resources>
