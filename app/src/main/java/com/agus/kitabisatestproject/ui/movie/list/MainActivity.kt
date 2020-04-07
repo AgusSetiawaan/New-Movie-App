@@ -76,19 +76,27 @@ class MainActivity : AppCompatActivity(), MovieListView, SwipeRefreshLayout.OnRe
     private fun getMoviesData(){
         when(category){
             Category.POPULAR -> {
-                movieAdapter.removeAll()
+                if(page == 1){
+                    movieAdapter.removeAll()
+                }
                 this@MainActivity.presenter.getPopularMovies(page)
             }
             Category.TOP_RATED -> {
-                movieAdapter.removeAll()
+                if(page == 1){
+                    movieAdapter.removeAll()
+                }
                 this@MainActivity.presenter.getTopRatedMovies(page)
             }
             Category.NOW_PLAYING -> {
-                movieAdapter.removeAll()
+                if(page == 1){
+                    movieAdapter.removeAll()
+                }
                 this@MainActivity.presenter.getNowPlayingMovies(page)
             }
             Category.UPCOMING -> {
-                movieAdapter.removeAll()
+                if(page == 1){
+                    movieAdapter.removeAll()
+                }
                 this@MainActivity.presenter.getUpComingMovies(page)
             }
             Category.FAVOURITE -> {
@@ -116,7 +124,10 @@ class MainActivity : AppCompatActivity(), MovieListView, SwipeRefreshLayout.OnRe
 
     override fun onSuccessGetWatchList(listMovie: List<MovieItem>) {
         if(listMovie.isNotEmpty()){
-            movieAdapter.setData(listMovie)
+            if(category == Category.FAVOURITE){
+                movieAdapter.setData(listMovie)
+            }
+
         }
     }
 
